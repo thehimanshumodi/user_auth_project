@@ -175,32 +175,34 @@ Follow these steps to set up and run the project locally:
 ## Project Structure
 
 user_auth_project/
-├── user_auth_project/      # Main Django project settings
-│   ├── init.py
+├── user_auth_project/
+│   ├── __init__.py
 │   ├── asgi.py
-│   ├── settings.py         # Project settings
-│   ├── urls.py             # Project URL configurations
+│   ├── settings.py
+│   ├── urls.py
 │   └── wsgi.py
-├── accounts/               # Django app for user management
+├── accounts/
 │   ├── migrations/
-│   ├── static/             # Optional: for default_profile.png
+│   │   └── __init__.py
+│   ├── static/
+│   │   └── default_profile.png  (Optional, if you create one)
 │   ├── templates/
-│   │   └── accounts/       # HTML templates for the app
+│   │   └── accounts/
 │   │       ├── base.html
 │   │       ├── signup.html
 │   │       ├── login.html
 │   │       ├── patient_dashboard.html
 │   │       └── doctor_dashboard.html
-│   ├── init.py
+│   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
-│   ├── forms.py            # Custom forms for signup/login
-│   ├── models.py           # Custom User model
+│   ├── forms.py
+│   ├── models.py
 │   ├── tests.py
-│   ├── urls.py             # App-specific URL configurations
-│   └── views.py            # Logic for handling requests
-├── media/                  # Directory for user-uploaded profile pictures
-├── venv/                   # Python virtual environment (if created)
-├── manage.py               # Django's command-line utility
-└── README.md               # This file
+│   ├── urls.py
+│   └── views.py
+├── media/                       (Directory for uploaded profile pictures)
+├── venv/                        (Python virtual environment, if created)
+├── manage.py
+└── README.md
 
