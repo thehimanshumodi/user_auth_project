@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %}Patient Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome, Patient {{ user.first_name }}!</h2>
+<hr>
+{% if user.profile_picture %}
+    <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="profile-pic">
+{% else %}
+    <img src="{% static 'default_profile.png' %}" alt="Default Profile Picture" class="profile-pic">
+{% endif %}
+
+<div class="dashboard-details">
+    <p class="dashboard-detail"><strong>First Name:</strong> {{ user.first_name }}</p>
+    <p class="dashboard-detail"><strong>Last Name:</strong> {{ user.last_name }}</p>
+    <p class="dashboard-detail"><strong>Username:</strong> {{ user.username }}</p>
+    <p class="dashboard-detail"><strong>Email:</strong> {{ user.email }}</p>
+    <p class="dashboard-detail"><strong>User Type:</strong> {{ user.user_type }}</p>
+    <p class="dashboard-detail"><strong>Address:</strong> {{ user.address_line1 }}, {{ user.city }}, {{ user.state }} - {{ user.pincode }}</p>
+</div>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="logout-button">Logout</button>
+</form>
+{% endblock %}
