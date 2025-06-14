@@ -171,38 +171,3 @@ Follow these steps to set up and run the project locally:
 
 4.  **Logout:**
     * On any dashboard page, click the "Logout" button to end your session. You will be redirected to the login page.
-
-## Project Structure
-
-user_auth_project/
-├── user_auth_project/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── accounts/
-│   ├── migrations/
-│   │   └── __init__.py
-│   ├── static/
-│   │   └── default_profile.png  (Optional, if you create one)
-│   ├── templates/
-│   │   └── accounts/
-│   │       ├── base.html
-│   │       ├── signup.html
-│   │       ├── login.html
-│   │       ├── patient_dashboard.html
-│   │       └── doctor_dashboard.html
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── media/                       (Directory for uploaded profile pictures)
-├── venv/                        (Python virtual environment, if created)
-├── manage.py
-└── README.md
-
